@@ -8,5 +8,5 @@ export class OidcStack extends cdk.Stack {
       super(scope, id, props);
       const provider = new GithubActionsIdentityProvider(this, 'GithubProvider');
       new components.oidc(this, "github-actions-demo-role", "gha-demo", provider);
-}
+    }
   }
