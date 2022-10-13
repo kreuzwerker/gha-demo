@@ -18,6 +18,13 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::072297576584:role/github-actions-demo-role
           aws-region: eu-west-1
+      - name: Create SSM Parameter
+        run: |
+        aws ssm put-parameter \
+          --name "Demo-Parameter" \
+          --type "String" \
+          --value "${{ github.sha }}" \
+          --overwrite
       - name: List s3
         run: |
           aws s3 ls
