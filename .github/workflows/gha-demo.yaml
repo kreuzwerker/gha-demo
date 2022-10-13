@@ -20,11 +20,7 @@ jobs:
           aws-region: eu-west-1
       - name: Create SSM Parameter
         run: |
-        aws ssm put-parameter \
-          --name "Demo-Parameter" \
-          --type "String" \
-          --value "${{ github.sha }}" \
-          --overwrite
+        aws ssm put-parameter --name "Demo-Parameter" --type "String" --value "${{ github.sha }}" --overwrite
       - name: List s3
         run: |
           aws s3 ls
