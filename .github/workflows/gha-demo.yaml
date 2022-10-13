@@ -6,7 +6,7 @@ on:
 
 jobs:
   prepare:
-    name: Prepare
+    name: DemoWorkflow
     runs-on: ubuntu-latest
     permissions:
       id-token: write # needed to interact with GitHub's OIDC Token endpoint.
