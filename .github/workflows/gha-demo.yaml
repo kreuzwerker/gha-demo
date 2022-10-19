@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  prepare:
+  DemoWorkflow:
     name: DemoWorkflow
     runs-on: ubuntu-latest
     permissions:
